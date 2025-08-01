@@ -13,8 +13,9 @@ He desarrollado proyectos con React, Python, Laravel y scraping de datos.
 Pregúntame sobre mis estudios, gustos o proyectos.
 """
 
-# Tu API Key de OpenRouter
-OPENROUTER_API_KEY = "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"
+load_dotenv()
+
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 @app.route('/chat', methods=['POST'])
 def chat():
